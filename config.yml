@@ -1,0 +1,16 @@
+http://json2yaml.com/
+
+---
+inventory:                      #TASK 1
+  plugin:SimpleInventory
+  options:
+    host_file: "hosts.yml"
+    group_file: "groups.yml"
+    default_file: "defauls.yml"
+    
+runners:                       #TASK 2
+  plugin:[serial| threaded]
+  options:
+  num_workers : 100
+  
+  ...        # 3 dots is end of YML file  
